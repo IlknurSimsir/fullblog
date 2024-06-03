@@ -24,7 +24,7 @@
 
   <div id="portfolio-details" class="portfolio-details">
     <div class="container">
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
       <div class="row">
         <div class="col-lg-8">
         <button class="back-button">&#8249;</button>
