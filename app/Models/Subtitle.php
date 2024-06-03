@@ -10,5 +10,5 @@ class Subtitle extends Model
     use HasFactory;
     protected $table = "subtitle";
     
-    protected $fillable=["category_id"];
+    protected $fillable=["id","title","category_id"];
 }
