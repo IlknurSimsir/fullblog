@@ -414,7 +414,11 @@
       </div>
 
       <div class="row">
+        
         @foreach($veri->category as $category)
+        @php
+        $showOtherButton = true;
+        @endphp
         <div class="col-lg-4 col-md-5 d-flex align-items-stretch mb-3">
           <div class="icon-box">
             <div class="icon"><i class="{{ $category->icon }}"></i></div>
@@ -427,11 +431,17 @@
               <a href="/subtitle?cat={{$subtitles->category_id}}&sub={{$subtitles->id}}" class="col-lg-5 col-md-5 align-items-stretch subtitles">
                 {{ $subtitles->title }}
               </a>
+              @if($showOtherButton)
+              <a href="/subtitle?cat={{$subtitles->category_id}}&sub=0" class="col-lg-5 col-md-5 align-items-stretch subtitles">
+                DİĞER
+              </a>
+              @php
+              $showOtherButton = false;
+              @endphp
+              @endif
               @endif
               @endforeach
-              <a href="/subtitle?cat={{$subtitles->category_id}}&sub=0" class="col-lg-5 col-md-5 align-items-stretch subtitles">
-                DİĞER 
-              </a>
+
 
 
             </div>

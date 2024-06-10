@@ -50,9 +50,9 @@
 
           @if(isset($sub))
           @foreach($veri->all_texts as $text)
-          @if($text->suptitle == $sub)
-          @foreach($veri->subtitle as $subtitle)
-          @if($text->category_id == $subtitle->category_id && $subtitle->id == $sub)
+          @if($text->suptitle == $sub && $text->category_id == $cat )
+       
+         
           <div class="content-container">
             <div class="limited-text">
               {!! substr($text->contents, 0, 300) !!} <!-- İlk 300 karakteri göster -->
@@ -62,8 +62,6 @@
               {!! $text->contents !!}
             </div>
           </div>
-          @endif
-          @endforeach
           @endif
           @endforeach
           @endif
