@@ -424,12 +424,12 @@
 
               @foreach($veri->subtitle as $subtitles)
               @if($category->id==$subtitles->category_id)
-              <a href="/subtitle?sub={{$subtitles->id}}" class="col-lg-5 col-md-5 align-items-stretch subtitles">
+              <a href="/subtitle?cat={{$subtitles->category_id}}&sub={{$subtitles->id}}" class="col-lg-5 col-md-5 align-items-stretch subtitles">
                 {{ $subtitles->title }}
               </a>
               @endif
               @endforeach
-              <a href="/subtitle?sub={{0}}" class="col-lg-5 col-md-5 align-items-stretch subtitles">
+              <a href="/subtitle?cat={{$subtitles->category_id}}&sub=0" class="col-lg-5 col-md-5 align-items-stretch subtitles">
                 DİĞER 
               </a>
 

@@ -31,7 +31,8 @@ class CategoryController extends Controller
         $veri -> category = Category::get();
         $veri -> subtitle = Subtitle::get(); 
         $sub = request('sub');
-        return view("portfolio-details",['sub' => $sub,'veri'=> $veri]);
+        $cat = request('cat');
+        return view("portfolio-details",['cat' => $cat,'sub' => $sub,'veri'=> $veri]);
     }
     
    
